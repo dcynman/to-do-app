@@ -8,11 +8,11 @@ function onReady() {
     TODO_LIST.textContent = '';
 
     toDos.forEach(function(toDo){
-      const NEW_LI document.createElement('li');
+      const NEW_LI = document.createElement('li');
       const CHECKBOX = document.createElement('input');
       CHECKBOX.type = "checkbox";
 
-      cont DELETE_BTN = document.createElement('button');
+      const DELETE_BTN = document.createElement('button');
       DELETE_BTN.textContent = "delete!";
 
       DELETE_BTN.addEventListener('click', event => {
@@ -37,7 +37,7 @@ function onReady() {
     if(!NEW_TODO_TEXT.value){ return; }
     toDos.push({
       title: NEW_TODO_TEXT.value,
-      complete: false
+      complete: false,
       id: id
     });
 
